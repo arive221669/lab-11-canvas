@@ -9,7 +9,20 @@
 <script type="text/javascript">
 	function draw() {
 		var sketch = document.getElementById('sketch');
-		var context  = sketch.GetConext("2d");
+		var context  = sketch.getContext("2d");
+		var b = 0
+		
+
+
+		for(var a = 0; a <= 5; a = a + 1) {
+
+			context.fillStyle = "#ff0000"
+			context.fillRect (b, 0, 50, 50);
+			b = b + 100
+
+
+
+		}
 	}
 
 
