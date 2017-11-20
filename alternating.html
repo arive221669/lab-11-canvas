@@ -4,6 +4,36 @@
 	<title></title>
 </head>
 <body onload = "draw()">
-<canvas id = sketch width="500" height="500"></canvas>
+<canvas id = sketch width="500" height="500">
+</canvas>
+<script type="text/javascript">
+	function draw() {
+		var sketch = document.getElementById ('sketch');
+		var context = sketch.getContext ("2d");
+
+		var a = 0
+		var b = 10
+
+		for(i = 0; i<10; i = i + 1) {
+			if (i%2 == 0) {
+				context.fillStyle = "#00ff00"
+				context.fillRect (a, 0, 30, 30)
+			}
+			else {
+				context.fillStyle = "#0000ff"
+				context.beginPath();
+				context.arc (b, 15, 15, 0, 2 * Math.PI, true);
+				context.closePath();
+				context.fill()
+			}
+			a = a + 50
+			b = b + 50
+		}
+	}
+
+
+
+</script>
+
 </body>
 </html>
