@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload = "draw()"">
+<canvas id = "sketch" width="1000" height="1000">
+</canvas>
+<script type="text/javascript">
+	function draw() {
+		var sketch = document.getElementById('sketch');
+		var context  = sketch.getContext("2d");
+		var c = prompt("How many circles do you want?")
+		var b = 30
+		var cc = parseInt(c,10)
+
+
+		for(var a = 0; a < cc; a = a + 1) {
+
+			context.fillStyle = "#0000ff"
+			context.beginPath();
+			context.arc(30, b, 20, 0, 2 * Math.PI, true);
+			context.closePath();
+			context.fill()
+			b = b + 50
+
+
+
+		}
+	}
+
+
+
+</script>
+
+</body>
+</html>
